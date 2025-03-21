@@ -1,0 +1,46 @@
+.offcanvas-header {
+  background: linear-gradient(to right, #fff0f5, #f7e9ec);
+  border-bottom: 1px solid #e2d3d3;
+  color: #6e0e18;
+
+  .offcanvas-title {
+    font-family: "Georgia", serif;
+    font-size: 1.5rem;
+    color: #6e0e18;
+    padding-left: 20px;
+  }
+
+  .btn-close {
+    filter: hue-rotate(300deg);
+  }
+}
+
+.offcanvas-body {
+  background-color: #8b9d70; // vineyard green
+  background-image: url("https://www.transparenttextures.com/patterns/wine-cork.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-blend-mode: multiply;
+  color: #fffaf5;
+  padding: 2rem;
+  min-height: 100vh;
+
+  .nav-link {
+    font-size: 1.1rem;
+    color: #fffaf0;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #f5e5d9;
+      padding-left: 1.25rem;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

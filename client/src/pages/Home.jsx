@@ -2,9 +2,11 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
+    <div className="home-page">
       <h1>Welcome to RankMyPour 🍷</h1>
-      <p>This is your beautiful wine-tasting app in the making.</p>
+      <p>Begin your tasting journey</p>
+      {/* Add your buttons or links here */}
     </div>
   );
 }
+
