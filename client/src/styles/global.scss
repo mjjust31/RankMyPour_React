@@ -1,0 +1,49 @@
+// Reset + base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f8f3f0;
+  color: #333;
+}
+
+// App layout container
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+// Typography
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+// Basic button style (optional)
+button {
+  padding: 0.5rem 1rem;
+  background-color: #800020;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a52a2a;
+}
