@@ -1,11 +1,16 @@
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
+import { useDrink } from "../contexts/DrinkContext";
+import { capitalizeFirstLetter } from "../helpers/stringHelpers";
 
 export default function NavBar() {
+  const { drinkType } = useDrink();
+
+
   return (
-    <div className="navbar-wrapper">
-      <Navbar bg="light" expand={false} className="mb-3">
+    <>
+      <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
           <div className="welcome-user">Welcome, User</div>
           <Navbar.Brand as={Link} to="/">
@@ -15,27 +20,37 @@ export default function NavBar() {
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-            placement="end">
+            placement="end"
+          >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link as={Link} to="/profile">
-                  My Wine Profile
+                  My {capitalizeFirstLetter(drinkType)} Profile
                 </Nav.Link>
                 <Nav.Link as={Link} to="/tasting">
-                  Single Tasting
+                  Single {capitalizeFirstLetter(drinkType)} Tasting
                 </Nav.Link>
                 <Nav.Link as={Link} to="/multi-tasting">
-                  Wine Showdown
+                {capitalizeFirstLetter(drinkType)} Showdown
                 </Nav.Link>
                 <Nav.Link as={Link} to="/events">
                   My Events
                 </Nav.Link>
-                {false && (
+          
+           
+                {/* Conditionally Render Winery or Brewery Link */
+                /*Do not display the wineries or breweries until determine how that will look on their end*/}
+                {false && drinkType === 'wine' && (
                   <Nav.Link as={Link} to="/my-wineries">
                     My Wineries
+                  </Nav.Link>
+                )}
+                {false && drinkType === 'beer' && (
+                  <Nav.Link as={Link} to="/my-breweries">
+                    My Breweries
                   </Nav.Link>
                 )}
               </Nav>
@@ -43,6 +58,6 @@ export default function NavBar() {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }

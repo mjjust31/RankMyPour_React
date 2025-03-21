@@ -1,0 +1,45 @@
+.drink-switcher {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 500px;
+
+  p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6e0e18;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+  }
+
+  .drink-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    button {
+      background-color: #fff0f5; // blush pink
+      border: 2px solid #6e0e18;
+      color: #6e0e18;
+      border-radius: 50px;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Georgia', serif;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &.active {
+        background-color: #6e0e18;
+        color: #fff;
+        border-color: #6e0e18;
+      }
+
+      &:hover {
+        background-color: #b93c4f;
+        color: #fff;
+      }
+    }
+  }
+}

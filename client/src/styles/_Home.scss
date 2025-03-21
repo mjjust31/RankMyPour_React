@@ -1,0 +1,56 @@
+.home-page {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9ecef; // soft blush background
+
+  h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #6e0e18; // deep burgundy
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: #4a2c2a; // rich brown
+    margin-bottom: 2rem;
+  }
+
+  .start-button {
+    background-color: #a6b89a; // soft sage green
+    color: #4a2c2a;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #6e0e18;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #6e0e18;
+      color: #fffaf5;
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+    }
+
+    .start-button {
+      font-size: 1.1rem;
+    }
+  }
+}
