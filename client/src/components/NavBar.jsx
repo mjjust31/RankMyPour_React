@@ -41,8 +41,7 @@ export default function NavBar() {
                 </Nav.Link>
           
            
-                {/* Conditionally Render Winery or Brewery Link */
-                /*Do not display the wineries or breweries until determine how that will look on their end*/}
+                {/* Conditionally Render Winery or Brewery Link */}
                 {false && drinkType === 'wine' && (
                   <Nav.Link as={Link} to="/my-wineries">
                     My Wineries

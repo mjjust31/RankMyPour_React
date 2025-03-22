@@ -1,20 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
-import { DrinkProvider } from './contexts/DrinkContext.jsx';
+import { BrowserRouter } from "react-router-dom"; // Import BrowserRouter
 
-// styles
+import { DrinkProvider } from './contexts/DrinkContext'; // Your context
 import "./styles/reset.css";
 import "./styles/global.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <DrinkProvider>
-      <BrowserRouter> {/* ✅ Add this wrapper */}
+    <BrowserRouter> {/* Wrap your app in BrowserRouter */}
+      <DrinkProvider>
         <App />
-      </BrowserRouter>
-    </DrinkProvider>
+      </DrinkProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

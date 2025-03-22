@@ -1,15 +1,16 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// 1. Create the context
+// Create the context
 const DrinkContext = createContext();
 
-// 2. Custom hook to use the context
+// Custom hook to use the context
 export const useDrink = () => useContext(DrinkContext);
 
-// 3. Context Provider Component
+// Context Provider Component
 export const DrinkProvider = ({ children }) => {
   const [drinkType, setDrinkType] = useState('wine'); // default is wine
 
+  // Function to change drink type
   const changeDrink = (type) => {
     switch (type) {
       case 'wine':

@@ -1,25 +1,16 @@
 import React from "react";
-import { useDrink } from "../contexts/DrinkContext";
+import { useDrink } from "../contexts/DrinkContext"; // Import the context
 
 export default function DrinkSwitcher() {
-  const { drinkType, changeDrink } = useDrink();
-
-  const drinks = ["wine", "beer", "cocktail"];
+  const { changeDrink } = useDrink(); // Access the changeDrink function from context
 
   return (
     <div className="drink-switcher">
-      <p>Select what you are sampling today:</p>
+      <p>Select what you are sampling today?</p>
       <div className="drink-buttons">
-        {drinks.map((type) => (
-          <button
-            key={type}
-            className={drinkType === type ? "active" : ""}
-            onClick={() => changeDrink(type)}>
-            {type === "wine" && "🍷 Wine"}
-            {type === "beer" && "🍺 Beer"}
-            {type === "cocktail" && "🍸 Cocktail"}
-          </button>
-        ))}
+        <button onClick={() => changeDrink("wine")}>🍷 Wine</button>
+        <button onClick={() => changeDrink("beer")}>🍺 Beer</button>
+        <button onClick={() => changeDrink("cocktail")}>🍸 Cocktail</button>
       </div>
     </div>
   );
